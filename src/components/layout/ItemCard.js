@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { findByLabelText } from '@testing-library/react'
 import { makeStyles } from '@material-ui/core/styles'
+import {IMG_URL} from '../../config/api-config'
 
 
 const getStyles = makeStyles(theme => ({
@@ -33,7 +34,7 @@ const ItemCard = props => {
         
             <div key={props.id} className={classes.container}>
                 
-                <img src={props.image ? `https://image.tmdb.org/t/p/w300/${props.image}` : ''} width='30%'/>
+                <img src={props.image ? `${IMG_URL}${props.image}` : ''} width='30%'/>
 
                 <div className={classes.textContainer}>
                     <h1>{props.title} </h1>
