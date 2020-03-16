@@ -24,6 +24,9 @@ const getStyles = makeStyles(theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-evenly',
+    },
+    img : {
+        maxWidth: '30%'
     }
     
   }))
@@ -34,7 +37,7 @@ const ItemCard = props => {
         
             <div key={props.id} className={classes.container}>
                 
-                <img src={props.image ? `${IMG_URL}${props.image}` : ''} width='30%'/>
+                <img src={props.image ? `${IMG_URL}${props.image}` : ''} className={classes.img}/>
 
                 <div className={classes.textContainer}>
                     <h1>{props.title} </h1>
