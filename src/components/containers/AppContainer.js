@@ -5,15 +5,13 @@ import SimpleTabs from "../layout/SimpleTabs";
 
 class AppContainer extends React.Component {
   state = {
-    
     searchResults: [],
     isLoading: false,
     selectedTab: 2
   };
 
-  fetchResults = (searchParams) => {
-    
-    console.log('searching', searchParams );
+  fetchResults = searchParams => {
+    console.log("searching", searchParams);
     this.setState({
       isLoading: true
     });
@@ -22,7 +20,10 @@ class AppContainer extends React.Component {
       console.log("calling search returned", results);
       this.setState({
         searchResults: results.data.results.slice(0, 20),
-        message: results.data.results.length == 0 ? `No data found using the search criteria ${searchParams.query}` : "",
+        message:
+          results.data.results.length == 0
+            ? `No data found using the search criteria ${searchParams.query}`
+            : "",
         isLoading: false,
         selectedTab: 1
       });
@@ -37,16 +38,12 @@ class AppContainer extends React.Component {
     });
   };
 
-
   render() {
     console.log(this.state);
     return (
       <div>
         <h1 style={headerStyle}>React Movie App</h1>
-        <SearchForm
-          onFocus={this.handleFocus}
-          onSubmit={this.fetchResults}
-        />
+        <SearchForm onFocus={this.handleFocus} onSubmit={this.fetchResults} />
 
         <SimpleTabs
           value={this.state.selectedTab}
@@ -59,9 +56,10 @@ class AppContainer extends React.Component {
 }
 
 const headerStyle = {
-    border: '10px solid black',
-    margin: 0,
-    padding: '1% 0',
-}
+  border: "10px solid black",
+  margin: 0,
+  padding: "1% 0"
+};
 
 export default AppContainer;
+ 
