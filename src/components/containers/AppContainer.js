@@ -2,6 +2,7 @@ import React from "react";
 import SearchForm from "../Forms/SearchForm";
 import { search } from "../../services/api";
 import SimpleTabs from "../layout/SimpleTabs";
+import {PAGE_SIZE} from "../../config/api-config"
 
 class AppContainer extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class AppContainer extends React.Component {
     search(searchParams).then(results => {
       console.log("calling search returned", results);
       this.setState({
-        searchResults: results.data.results.slice(0, 20),
+        searchResults: results.data.results.slice(0, PAGE_SIZE),
         message:
           results.data.results.length == 0
             ? `No data found using the search criteria ${searchParams.query}`

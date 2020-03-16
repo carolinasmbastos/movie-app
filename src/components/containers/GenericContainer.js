@@ -2,6 +2,7 @@ import React from "react";
 import { filter } from "../../services/api";
 import { ItemList } from "../layout/ItemList";
 import CategoryForm from "../Forms/CategoryForm";
+import {PAGE_SIZE} from "../../config/api-config"
 
 class GenericContainer extends React.Component {
   state = {
@@ -13,7 +14,7 @@ class GenericContainer extends React.Component {
     filter(this.props.mediaType, e.target.value).then(results => {
       console.log("filtered category");
       this.setState({
-        results: results.data.results.slice(0, 20)
+        results: results.data.results.slice(0, PAGE_SIZE)
       });
     });
   };
