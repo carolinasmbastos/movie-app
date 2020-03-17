@@ -10,9 +10,9 @@ class GenericContainer extends React.Component {
   };
 
   handleChange = e => {
-    console.log("select changed");
+    //console.log("select changed");
     filter(this.props.mediaType, e.target.value).then(results => {
-      console.log("filtered category");
+      //console.log("filtered category");
       this.setState({
         results: results.data.results.slice(0, PAGE_SIZE)
       });
@@ -20,7 +20,7 @@ class GenericContainer extends React.Component {
   };
 
   render() {
-    console.log("genericcontainer", this.props.categories);
+    //console.log("genericcontainer", this.props.categories);
     return (
       <div>
         <CategoryForm

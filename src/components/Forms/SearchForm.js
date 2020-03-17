@@ -12,7 +12,7 @@ class SearchForm extends React.Component {
   };
 
   handleChange = e => {
-    console.log("handle change", e.target.name, e.target.value);
+    //console.log("handle change", e.target.name, e.target.value);
 
     var searchParams = {
       ...this.state.searchParams,

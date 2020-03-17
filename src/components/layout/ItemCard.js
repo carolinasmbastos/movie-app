@@ -1,9 +1,4 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardContent";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { findByLabelText } from "@testing-library/react";
 import { makeStyles } from "@material-ui/core/styles";
 import { IMG_URL } from "../../config/api-config";
 

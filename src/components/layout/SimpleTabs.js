@@ -64,14 +64,14 @@ export default function SimpleTabs(props) {
     setValue(newValue);
     setMessage("Please enter a search");
     setSearchResults([]);
-    console.log("value", newValue);
+    //console.log("value", newValue);
   };
   React.useEffect(() => {
     setValue(props.value);
     setMessage(props.message);
     setSearchResults(props.searchResults);
   }, [props]);
-  console.log("SimpleTabs", props);
+  //console.log("SimpleTabs", props);
   return (
     <div className={classes.root}>
       <Tabs

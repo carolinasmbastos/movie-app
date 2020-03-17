@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import ItemCard from "./ItemCard";
 
 export const ItemList = props => {
-  console.log("items", props);
+  //console.log("items", props);
   return (
     <div className="container">
       <Grid container>

@@ -3,7 +3,7 @@ import { ItemList } from "../layout/ItemList";
 
 class SearchResultsContainer extends React.Component {
   render() {
-    console.log("SearchResultsContainer", this.props);
+    //console.log("SearchResultsContainer", this.props);
     return (
       <div>
         <h2>

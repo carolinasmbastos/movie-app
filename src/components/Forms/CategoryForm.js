@@ -5,7 +5,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 
 const CategoryForm = props => {
-  console.log("catergyform", props);
+  //console.log("catergyform", props);
   return (
     <FormControl variant="outlined" style={{ minWidth: 120 }}>
       <InputLabel id="categoryLabel">Category</InputLabel>
